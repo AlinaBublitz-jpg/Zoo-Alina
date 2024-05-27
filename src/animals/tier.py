@@ -8,6 +8,7 @@ class Tier(ABC):
         self.alter = alter # öffentliches Attribut, das das Alter des Tieres speichert
         self._gewicht = gewicht  # geschütztes Attribut, das das Gewicht des Tieres speichert
 
+
     # Getter-Methode für das private Attribut art
     def get_art(self):
         return self.__art
@@ -30,7 +31,7 @@ class Tier(ABC):
 
     @abstractmethod
     def geraeusch(self):
-        pass
+        passA
 
     # Methode zur Beschreibung des Fütterns des Tieres
     def fuettern(self, futtermenge, futtertyp=None):
@@ -42,3 +43,7 @@ class Tier(ABC):
         else:
             # Gibt aus, dass das Tier mit der angegebenen Menge von Futter gefüttert wird
             print(f"Das Tier wird mit {futtermenge} kg gefüttert.")
+
+    @property
+    def gewicht(self):
+        return self._gewicht

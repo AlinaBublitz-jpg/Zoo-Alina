@@ -11,6 +11,7 @@ from src.animals.reptil import Reptil
 # Hauptfunktion, in der die Tiere instanziiert und Methoden aufgerufen werden
 def main():
     # Erzeugt Instanzen der verschiedenen Tierklassen
+    # Die ersten 3 Werte sind immer "Art", "Alter" und "Gewicht"
     wal = Wal("Wal", 20, 30000, "blau", 500, 30)
     adler = Adler("Adler", 5, 7, 1000, 30, 2.5, "braun und weiß")
     chamaeleon = Chamaeleon("Chamäleon", 2, 0.5, "grün")

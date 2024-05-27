@@ -5,7 +5,6 @@ from src.animals.wal import Wal
 from src.animals.adler import Adler
 from src.animals.chamaeleon import Chamaeleon
 from src.animals.loewe import Loewe
-
 from src.animals.pinguin import Pinguin
 from src.animals.saeugetier import Saeugetier
 from src.animals.vogel import Vogel
@@ -39,7 +38,6 @@ class TestTiere(unittest.TestCase):
             (self.reptil, "Das Reptil zischt.")
         ]
 
-
         # Iteriert über jedes Tier und das erwartete Geräusch
         for animal, expected_sound in animals:
             # Führt einen Subtest für jedes Tier durch
@@ -47,7 +45,7 @@ class TestTiere(unittest.TestCase):
                 captured_output = StringIO()
                 sys_stdout = sys.stdout  # Speichern des ursprünglichen sys.stdout
                 sys.stdout = captured_output  # sys.stdout auf StringIO umleiten
-                animal.geraeusch() # Ruft die geräusch-Methode des Tieres auf
+                animal.geraeusch()  # Ruft die geräusch-Methode des Tieres auf
                 sys.stdout = sys_stdout  # Wiederherstellen des ursprünglichen sys.stdout
                 output = captured_output.getvalue().strip()
                 try:
@@ -56,7 +54,8 @@ class TestTiere(unittest.TestCase):
                     print(f"Die Methode geräusch für {animal.get_art()} funktioniert korrekt.")
                 except AssertionError as e:
                     # Gibt eine Fehlermeldung aus, wenn die Überprüfung fehlschlägt, und wirft die AssertionError
-                    print(f"Die Methode geräusch für {animal.get_art()} funktioniert nicht korrekt. Erwartet: '{expected_sound}', aber erhalten: '{output}'")
+                    print(
+                        f"Die Methode geräusch für {animal.get_art()} funktioniert nicht korrekt. Erwartet: '{expected_sound}', aber erhalten: '{output}'")
                     raise e
 
     # Testet die füttern-Methode für alle Tiere
@@ -82,10 +81,12 @@ class TestTiere(unittest.TestCase):
                 try:
                     # Überprüft, ob das Gewicht des Tieres korrekt aktualisiert wurde
                     self.assertEqual(animal.get_gewicht(), initial_gewicht + futtermenge)
-                    print(f"Die Methode füttern für {animal.get_art()} funktioniert korrekt. Das Gewicht wurde richtig angepasst.")
+                    print(
+                        f"Die Methode füttern für {animal.get_art()} funktioniert korrekt. Das Gewicht wurde richtig angepasst.")
                 except AssertionError as e:
                     # Gibt eine Fehlermeldung aus, wenn die Überprüfung fehlschlägt, und wirft die AssertionError
-                    print(f"Die Methode füttern für {animal.get_art()} funktioniert nicht korrekt. Erwartet: {initial_gewicht + futtermenge}, aber erhalten: {animal.get_gewicht()}")
+                    print(
+                        f"Die Methode füttern für {animal.get_art()} funktioniert nicht korrekt. Erwartet: {initial_gewicht + futtermenge}, aber erhalten: {animal.get_gewicht()}")
                     raise e
 
                 # Testet die füttern-Methode ohne Angabe des Futtertyps
@@ -94,10 +95,12 @@ class TestTiere(unittest.TestCase):
                 try:
                     # Überprüft, ob das Gewicht des Tieres erneut korrekt aktualisiert wurde
                     self.assertEqual(animal.get_gewicht(), initial_gewicht + futtermenge)
-                    print(f"Die Methode füttern ohne Angabe des Futtertyps für {animal.get_art()} funktioniert korrekt. Das Gewicht wurde richtig angepasst.")
+                    print(
+                        f"Die Methode füttern ohne Angabe des Futtertyps für {animal.get_art()} funktioniert korrekt. Das Gewicht wurde richtig angepasst.")
                 except AssertionError as e:
                     # Gibt eine Fehlermeldung aus, wenn die Überprüfung fehlschlägt, und wirft die AssertionError
-                    print(f"Die Methode füttern ohne Angabe des Futtertyps für {animal.get_art()} funktioniert nicht korrekt. Erwartet: {initial_gewicht + futtermenge}, aber erhalten: {animal.get_gewicht()}")
+                    print(
+                        f"Die Methode füttern ohne Angabe des Futtertyps für {animal.get_art()} funktioniert nicht korrekt. Erwartet: {initial_gewicht + futtermenge}, aber erhalten: {animal.get_gewicht()}")
                     raise e
 
 
