@@ -46,5 +46,5 @@ fliegen.py: Definiert die abstrakte Klasse Fliegen.
 
 **Unit-Tests**
 
-Die Unit-Tests befinden sich im Verzeichnis tests und testen die Methoden geraeusch und fuettern für alle Tierklassen.
+Die Unit-Tests befinden sich im Verzeichnis tests und testet die Methoden geraeusch und fuettern für alle Tierklassen.
 
