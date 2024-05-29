@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 
+
 # Definiert die abstrakte Klasse Fliegen, die von ABC erbt
 class Fliegen(ABC):
     def __init__(self, hoehe, dauer):
@@ -10,3 +11,7 @@ class Fliegen(ABC):
     @abstractmethod
     def fliegen(self):
         pass
+
+
+
+
