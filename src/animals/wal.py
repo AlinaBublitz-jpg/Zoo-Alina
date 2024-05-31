@@ -10,6 +10,7 @@ class Wal(Saeugetier, Tauchen):
     def bewegung(self):
         print(f"Der {self.get_art()} schwimmt im Wasser.")
 
+    # Geräusch des Wals
     def geraeusch(self):
         print(f"Der {self.get_art()} macht Walgesänge.")
 

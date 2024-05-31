@@ -15,5 +15,6 @@ class Saeugetier(Tier):
     def bewegung(self):
         print(f"Das {self.get_art()} läuft auf vier Beinen.")
 
+    # Geräusch des Säugetiers
     def geraeusch(self):
         print(f"Das {self.get_art()} macht Geräusche.")
